@@ -14,8 +14,8 @@
 from __future__ import absolute_import
 
 # import models into model package
-from specpipe.models.device import Device
-from specpipe.models.device_response import DeviceResponse
-from specpipe.models.devices_response import DevicesResponse
 from specpipe.models.error_response import ErrorResponse
-from specpipe.models.update_device_request import UpdateDeviceRequest
+from specpipe.models.fm_device import FmDevice
+from specpipe.models.fm_device_response import FmDeviceResponse
+from specpipe.models.fm_devices_response import FmDevicesResponse
+from specpipe.models.update_fm_device_request import UpdateFmDeviceRequest

@@ -4,14 +4,14 @@ All URIs are relative to */v0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**devices_deviceid_get**](DeviceApi.md#devices_deviceid_get) | **GET** /devices/{deviceid} | Read device configuration
-[**devices_deviceid_put**](DeviceApi.md#devices_deviceid_put) | **PUT** /devices/{deviceid} | Update device
-[**devices_get**](DeviceApi.md#devices_get) | **GET** /devices | List devices
+[**fm_devices_deviceid_get**](DeviceApi.md#fm_devices_deviceid_get) | **GET** /fm/devices/{deviceid} | Read FM device configuration
+[**fm_devices_deviceid_put**](DeviceApi.md#fm_devices_deviceid_put) | **PUT** /fm/devices/{deviceid} | Update FM device
+[**fm_devices_get**](DeviceApi.md#fm_devices_get) | **GET** /fm/devices | List FM devices
 
-# **devices_deviceid_get**
-> DeviceResponse devices_deviceid_get(deviceid)
+# **fm_devices_deviceid_get**
+> FmDeviceResponse fm_devices_deviceid_get(deviceid)
 
-Read device configuration
+Read FM device configuration
 
 ### Example
 ```python
@@ -26,11 +26,11 @@ api_instance = specpipe.DeviceApi()
 deviceid = 'deviceid_example' # str | deviceid
 
 try:
-    # Read device configuration
-    api_response = api_instance.devices_deviceid_get(deviceid)
+    # Read FM device configuration
+    api_response = api_instance.fm_devices_deviceid_get(deviceid)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DeviceApi->devices_deviceid_get: %s\n" % e)
+    print("Exception when calling DeviceApi->fm_devices_deviceid_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -41,7 +41,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceResponse**](DeviceResponse.md)
+[**FmDeviceResponse**](FmDeviceResponse.md)
 
 ### Authorization
 
@@ -54,10 +54,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **devices_deviceid_put**
-> DeviceResponse devices_deviceid_put(body, deviceid)
+# **fm_devices_deviceid_put**
+> FmDeviceResponse fm_devices_deviceid_put(body, deviceid)
 
-Update device
+Update FM device
 
 ### Example
 ```python
@@ -69,27 +69,27 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = specpipe.DeviceApi()
-body = specpipe.UpdateDeviceRequest() # UpdateDeviceRequest | 
+body = specpipe.UpdateFmDeviceRequest() # UpdateFmDeviceRequest | 
 deviceid = 'deviceid_example' # str | deviceid
 
 try:
-    # Update device
-    api_response = api_instance.devices_deviceid_put(body, deviceid)
+    # Update FM device
+    api_response = api_instance.fm_devices_deviceid_put(body, deviceid)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DeviceApi->devices_deviceid_put: %s\n" % e)
+    print("Exception when calling DeviceApi->fm_devices_deviceid_put: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**UpdateDeviceRequest**](UpdateDeviceRequest.md)|  | 
+ **body** | [**UpdateFmDeviceRequest**](UpdateFmDeviceRequest.md)|  | 
  **deviceid** | **str**| deviceid | 
 
 ### Return type
 
-[**DeviceResponse**](DeviceResponse.md)
+[**FmDeviceResponse**](FmDeviceResponse.md)
 
 ### Authorization
 
@@ -102,10 +102,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **devices_get**
-> DevicesResponse devices_get()
+# **fm_devices_get**
+> FmDevicesResponse fm_devices_get()
 
-List devices
+List FM devices
 
 ### Example
 ```python
@@ -119,11 +119,11 @@ from pprint import pprint
 api_instance = specpipe.DeviceApi()
 
 try:
-    # List devices
-    api_response = api_instance.devices_get()
+    # List FM devices
+    api_response = api_instance.fm_devices_get()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DeviceApi->devices_get: %s\n" % e)
+    print("Exception when calling DeviceApi->fm_devices_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -131,7 +131,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DevicesResponse**](DevicesResponse.md)
+[**FmDevicesResponse**](FmDevicesResponse.md)
 
 ### Authorization
 

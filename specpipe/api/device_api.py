@@ -32,38 +32,38 @@ class DeviceApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def devices_deviceid_get(self, deviceid, **kwargs):  # noqa: E501
-        """Read device configuration  # noqa: E501
+    def fm_devices_deviceid_get(self, deviceid, **kwargs):  # noqa: E501
+        """Read FM device configuration  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.devices_deviceid_get(deviceid, async_req=True)
+        >>> thread = api.fm_devices_deviceid_get(deviceid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str deviceid: deviceid (required)
-        :return: DeviceResponse
+        :return: FmDeviceResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.devices_deviceid_get_with_http_info(deviceid, **kwargs)  # noqa: E501
+            return self.fm_devices_deviceid_get_with_http_info(deviceid, **kwargs)  # noqa: E501
         else:
-            (data) = self.devices_deviceid_get_with_http_info(deviceid, **kwargs)  # noqa: E501
+            (data) = self.fm_devices_deviceid_get_with_http_info(deviceid, **kwargs)  # noqa: E501
             return data
 
-    def devices_deviceid_get_with_http_info(self, deviceid, **kwargs):  # noqa: E501
-        """Read device configuration  # noqa: E501
+    def fm_devices_deviceid_get_with_http_info(self, deviceid, **kwargs):  # noqa: E501
+        """Read FM device configuration  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.devices_deviceid_get_with_http_info(deviceid, async_req=True)
+        >>> thread = api.fm_devices_deviceid_get_with_http_info(deviceid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str deviceid: deviceid (required)
-        :return: DeviceResponse
+        :return: FmDeviceResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -79,14 +79,14 @@ class DeviceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method devices_deviceid_get" % key
+                    " to method fm_devices_deviceid_get" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'deviceid' is set
         if ('deviceid' not in params or
                 params['deviceid'] is None):
-            raise ValueError("Missing the required parameter `deviceid` when calling `devices_deviceid_get`")  # noqa: E501
+            raise ValueError("Missing the required parameter `deviceid` when calling `fm_devices_deviceid_get`")  # noqa: E501
 
         collection_formats = {}
 
@@ -110,14 +110,14 @@ class DeviceApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/devices/{deviceid}', 'GET',
+            '/fm/devices/{deviceid}', 'GET',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='DeviceResponse',  # noqa: E501
+            response_type='FmDeviceResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -125,40 +125,40 @@ class DeviceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def devices_deviceid_put(self, body, deviceid, **kwargs):  # noqa: E501
-        """Update device  # noqa: E501
+    def fm_devices_deviceid_put(self, body, deviceid, **kwargs):  # noqa: E501
+        """Update FM device  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.devices_deviceid_put(body, deviceid, async_req=True)
+        >>> thread = api.fm_devices_deviceid_put(body, deviceid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param UpdateDeviceRequest body: (required)
+        :param UpdateFmDeviceRequest body: (required)
         :param str deviceid: deviceid (required)
-        :return: DeviceResponse
+        :return: FmDeviceResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.devices_deviceid_put_with_http_info(body, deviceid, **kwargs)  # noqa: E501
+            return self.fm_devices_deviceid_put_with_http_info(body, deviceid, **kwargs)  # noqa: E501
         else:
-            (data) = self.devices_deviceid_put_with_http_info(body, deviceid, **kwargs)  # noqa: E501
+            (data) = self.fm_devices_deviceid_put_with_http_info(body, deviceid, **kwargs)  # noqa: E501
             return data
 
-    def devices_deviceid_put_with_http_info(self, body, deviceid, **kwargs):  # noqa: E501
-        """Update device  # noqa: E501
+    def fm_devices_deviceid_put_with_http_info(self, body, deviceid, **kwargs):  # noqa: E501
+        """Update FM device  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.devices_deviceid_put_with_http_info(body, deviceid, async_req=True)
+        >>> thread = api.fm_devices_deviceid_put_with_http_info(body, deviceid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param UpdateDeviceRequest body: (required)
+        :param UpdateFmDeviceRequest body: (required)
         :param str deviceid: deviceid (required)
-        :return: DeviceResponse
+        :return: FmDeviceResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -174,18 +174,18 @@ class DeviceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method devices_deviceid_put" % key
+                    " to method fm_devices_deviceid_put" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params or
                 params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `devices_deviceid_put`")  # noqa: E501
+            raise ValueError("Missing the required parameter `body` when calling `fm_devices_deviceid_put`")  # noqa: E501
         # verify the required parameter 'deviceid' is set
         if ('deviceid' not in params or
                 params['deviceid'] is None):
-            raise ValueError("Missing the required parameter `deviceid` when calling `devices_deviceid_put`")  # noqa: E501
+            raise ValueError("Missing the required parameter `deviceid` when calling `fm_devices_deviceid_put`")  # noqa: E501
 
         collection_formats = {}
 
@@ -215,14 +215,14 @@ class DeviceApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/devices/{deviceid}', 'PUT',
+            '/fm/devices/{deviceid}', 'PUT',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='DeviceResponse',  # noqa: E501
+            response_type='FmDeviceResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -230,36 +230,36 @@ class DeviceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def devices_get(self, **kwargs):  # noqa: E501
-        """List devices  # noqa: E501
+    def fm_devices_get(self, **kwargs):  # noqa: E501
+        """List FM devices  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.devices_get(async_req=True)
+        >>> thread = api.fm_devices_get(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :return: DevicesResponse
+        :return: FmDevicesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.devices_get_with_http_info(**kwargs)  # noqa: E501
+            return self.fm_devices_get_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.devices_get_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.fm_devices_get_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def devices_get_with_http_info(self, **kwargs):  # noqa: E501
-        """List devices  # noqa: E501
+    def fm_devices_get_with_http_info(self, **kwargs):  # noqa: E501
+        """List FM devices  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.devices_get_with_http_info(async_req=True)
+        >>> thread = api.fm_devices_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :return: DevicesResponse
+        :return: FmDevicesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -275,7 +275,7 @@ class DeviceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method devices_get" % key
+                    " to method fm_devices_get" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -300,14 +300,14 @@ class DeviceApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/devices', 'GET',
+            '/fm/devices', 'GET',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='DevicesResponse',  # noqa: E501
+            response_type='FmDevicesResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

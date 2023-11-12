@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import specpipe
-from specpipe.models.device_response import DeviceResponse  # noqa: E501
+from specpipe.models.fm_device_response import FmDeviceResponse  # noqa: E501
 from specpipe.rest import ApiException
 
 
-class TestDeviceResponse(unittest.TestCase):
-    """DeviceResponse unit test stubs"""
+class TestFmDeviceResponse(unittest.TestCase):
+    """FmDeviceResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestDeviceResponse(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testDeviceResponse(self):
-        """Test DeviceResponse"""
+    def testFmDeviceResponse(self):
+        """Test FmDeviceResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = specpipe.models.device_response.DeviceResponse()  # noqa: E501
+        # model = specpipe.models.fm_device_response.FmDeviceResponse()  # noqa: E501
         pass
 
 

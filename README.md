@@ -56,33 +56,33 @@ api_instance = specpipe.DeviceApi(specpipe.ApiClient(configuration))
 deviceid = 'deviceid_example' # str | deviceid
 
 try:
-    # Read device configuration
-    api_response = api_instance.devices_deviceid_get(deviceid)
+    # Read FM device configuration
+    api_response = api_instance.fm_devices_deviceid_get(deviceid)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DeviceApi->devices_deviceid_get: %s\n" % e)
+    print("Exception when calling DeviceApi->fm_devices_deviceid_get: %s\n" % e)
 
 # create an instance of the API class
 api_instance = specpipe.DeviceApi(specpipe.ApiClient(configuration))
-body = specpipe.UpdateDeviceRequest() # UpdateDeviceRequest | 
+body = specpipe.UpdateFmDeviceRequest() # UpdateFmDeviceRequest | 
 deviceid = 'deviceid_example' # str | deviceid
 
 try:
-    # Update device
-    api_response = api_instance.devices_deviceid_put(body, deviceid)
+    # Update FM device
+    api_response = api_instance.fm_devices_deviceid_put(body, deviceid)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DeviceApi->devices_deviceid_put: %s\n" % e)
+    print("Exception when calling DeviceApi->fm_devices_deviceid_put: %s\n" % e)
 
 # create an instance of the API class
 api_instance = specpipe.DeviceApi(specpipe.ApiClient(configuration))
 
 try:
-    # List devices
-    api_response = api_instance.devices_get()
+    # List FM devices
+    api_response = api_instance.fm_devices_get()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DeviceApi->devices_get: %s\n" % e)
+    print("Exception when calling DeviceApi->fm_devices_get: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
@@ -91,15 +91,23 @@ All URIs are relative to */v0*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DeviceApi* | [**devices_deviceid_get**](docs/DeviceApi.md#devices_deviceid_get) | **GET** /devices/{deviceid} | Read device configuration
-*DeviceApi* | [**devices_deviceid_put**](docs/DeviceApi.md#devices_deviceid_put) | **PUT** /devices/{deviceid} | Update device
-*DeviceApi* | [**devices_get**](docs/DeviceApi.md#devices_get) | **GET** /devices | List devices
+*DeviceApi* | [**fm_devices_deviceid_get**](docs/DeviceApi.md#fm_devices_deviceid_get) | **GET** /fm/devices/{deviceid} | Read FM device configuration
+*DeviceApi* | [**fm_devices_deviceid_put**](docs/DeviceApi.md#fm_devices_deviceid_put) | **PUT** /fm/devices/{deviceid} | Update FM device
+*DeviceApi* | [**fm_devices_get**](docs/DeviceApi.md#fm_devices_get) | **GET** /fm/devices | List FM devices
 
 ## Documentation For Models
 
- - [Device](docs/Device.md)
- - [DeviceResponse](docs/DeviceResponse.md)
- - [DevicesResponse](docs/DevicesResponse.md)
  - [ErrorResponse](docs/ErrorResponse.md)
- - [UpdateDeviceRequest](docs/UpdateDeviceRequest.md)
+ - [FmDevice](docs/FmDevice.md)
+ - [FmDeviceResponse](docs/FmDeviceResponse.md)
+ - [FmDevicesResponse](docs/FmDevicesResponse.md)
+ - [UpdateFmDeviceRequest](docs/UpdateFmDeviceRequest.md)
+
+## Documentation For Authorization
+
+ All endpoints do not require authorization.
+
+
+## Author
+
 

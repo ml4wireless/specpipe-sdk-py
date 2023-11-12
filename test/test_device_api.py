@@ -28,24 +28,24 @@ class TestDeviceApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_devices_deviceid_get(self):
-        """Test case for devices_deviceid_get
+    def test_fm_devices_deviceid_get(self):
+        """Test case for fm_devices_deviceid_get
 
-        Read device configuration  # noqa: E501
+        Read FM device configuration  # noqa: E501
         """
         pass
 
-    def test_devices_deviceid_put(self):
-        """Test case for devices_deviceid_put
+    def test_fm_devices_deviceid_put(self):
+        """Test case for fm_devices_deviceid_put
 
-        Update device  # noqa: E501
+        Update FM device  # noqa: E501
         """
         pass
 
-    def test_devices_get(self):
-        """Test case for devices_get
+    def test_fm_devices_get(self):
+        """Test case for fm_devices_get
 
-        List devices  # noqa: E501
+        List FM devices  # noqa: E501
         """
         pass
 
