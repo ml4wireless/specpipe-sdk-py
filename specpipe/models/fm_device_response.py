@@ -39,8 +39,7 @@ class FmDeviceResponse(object):
         """FmDeviceResponse - a model defined in Swagger"""  # noqa: E501
         self._device = None
         self.discriminator = None
-        if device is not None:
-            self.device = device
+        self.device = device
 
     @property
     def device(self):
@@ -60,6 +59,8 @@ class FmDeviceResponse(object):
         :param device: The device of this FmDeviceResponse.  # noqa: E501
         :type: FmDevice
         """
+        if device is None:
+            raise ValueError("Invalid value for `device`, must not be `None`")  # noqa: E501
 
         self._device = device
 

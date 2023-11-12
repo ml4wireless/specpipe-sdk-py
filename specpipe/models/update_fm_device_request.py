@@ -39,8 +39,7 @@ class UpdateFmDeviceRequest(object):
         """UpdateFmDeviceRequest - a model defined in Swagger"""  # noqa: E501
         self._freq = None
         self.discriminator = None
-        if freq is not None:
-            self.freq = freq
+        self.freq = freq
 
     @property
     def freq(self):
@@ -60,6 +59,8 @@ class UpdateFmDeviceRequest(object):
         :param freq: The freq of this UpdateFmDeviceRequest.  # noqa: E501
         :type: str
         """
+        if freq is None:
+            raise ValueError("Invalid value for `freq`, must not be `None`")  # noqa: E501
 
         self._freq = freq
 

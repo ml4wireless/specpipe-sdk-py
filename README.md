@@ -102,3 +102,12 @@ Class | Method | HTTP request | Description
  - [FmDeviceResponse](docs/FmDeviceResponse.md)
  - [FmDevicesResponse](docs/FmDevicesResponse.md)
  - [UpdateFmDeviceRequest](docs/UpdateFmDeviceRequest.md)
+
+## Documentation For Authorization
+
+ All endpoints do not require authorization.
+
+
+## Author
+
+
