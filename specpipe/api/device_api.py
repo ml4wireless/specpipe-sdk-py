@@ -32,43 +32,43 @@ class DeviceApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def fm_devices_deviceid_get(self, deviceid, **kwargs):  # noqa: E501
+    def fm_devices_devicename_get(self, devicename, **kwargs):  # noqa: E501
         """Read FM device configuration  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.fm_devices_deviceid_get(deviceid, async_req=True)
+        >>> thread = api.fm_devices_devicename_get(devicename, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str deviceid: deviceid (required)
+        :param str devicename: device name (required)
         :return: FmDeviceResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.fm_devices_deviceid_get_with_http_info(deviceid, **kwargs)  # noqa: E501
+            return self.fm_devices_devicename_get_with_http_info(devicename, **kwargs)  # noqa: E501
         else:
-            (data) = self.fm_devices_deviceid_get_with_http_info(deviceid, **kwargs)  # noqa: E501
+            (data) = self.fm_devices_devicename_get_with_http_info(devicename, **kwargs)  # noqa: E501
             return data
 
-    def fm_devices_deviceid_get_with_http_info(self, deviceid, **kwargs):  # noqa: E501
+    def fm_devices_devicename_get_with_http_info(self, devicename, **kwargs):  # noqa: E501
         """Read FM device configuration  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.fm_devices_deviceid_get_with_http_info(deviceid, async_req=True)
+        >>> thread = api.fm_devices_devicename_get_with_http_info(devicename, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str deviceid: deviceid (required)
+        :param str devicename: device name (required)
         :return: FmDeviceResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['deviceid']  # noqa: E501
+        all_params = ['devicename']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -79,20 +79,20 @@ class DeviceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method fm_devices_deviceid_get" % key
+                    " to method fm_devices_devicename_get" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'deviceid' is set
-        if ('deviceid' not in params or
-                params['deviceid'] is None):
-            raise ValueError("Missing the required parameter `deviceid` when calling `fm_devices_deviceid_get`")  # noqa: E501
+        # verify the required parameter 'devicename' is set
+        if ('devicename' not in params or
+                params['devicename'] is None):
+            raise ValueError("Missing the required parameter `devicename` when calling `fm_devices_devicename_get`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'deviceid' in params:
-            path_params['deviceid'] = params['deviceid']  # noqa: E501
+        if 'devicename' in params:
+            path_params['devicename'] = params['devicename']  # noqa: E501
 
         query_params = []
 
@@ -110,7 +110,7 @@ class DeviceApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/fm/devices/{deviceid}', 'GET',
+            '/fm/devices/{devicename}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -125,45 +125,45 @@ class DeviceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def fm_devices_deviceid_put(self, body, deviceid, **kwargs):  # noqa: E501
+    def fm_devices_devicename_put(self, body, devicename, **kwargs):  # noqa: E501
         """Update FM device  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.fm_devices_deviceid_put(body, deviceid, async_req=True)
+        >>> thread = api.fm_devices_devicename_put(body, devicename, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param UpdateFmDeviceRequest body: (required)
-        :param str deviceid: deviceid (required)
+        :param str devicename: device name (required)
         :return: FmDeviceResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.fm_devices_deviceid_put_with_http_info(body, deviceid, **kwargs)  # noqa: E501
+            return self.fm_devices_devicename_put_with_http_info(body, devicename, **kwargs)  # noqa: E501
         else:
-            (data) = self.fm_devices_deviceid_put_with_http_info(body, deviceid, **kwargs)  # noqa: E501
+            (data) = self.fm_devices_devicename_put_with_http_info(body, devicename, **kwargs)  # noqa: E501
             return data
 
-    def fm_devices_deviceid_put_with_http_info(self, body, deviceid, **kwargs):  # noqa: E501
+    def fm_devices_devicename_put_with_http_info(self, body, devicename, **kwargs):  # noqa: E501
         """Update FM device  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.fm_devices_deviceid_put_with_http_info(body, deviceid, async_req=True)
+        >>> thread = api.fm_devices_devicename_put_with_http_info(body, devicename, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param UpdateFmDeviceRequest body: (required)
-        :param str deviceid: deviceid (required)
+        :param str devicename: device name (required)
         :return: FmDeviceResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'deviceid']  # noqa: E501
+        all_params = ['body', 'devicename']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -174,24 +174,24 @@ class DeviceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method fm_devices_deviceid_put" % key
+                    " to method fm_devices_devicename_put" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params or
                 params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `fm_devices_deviceid_put`")  # noqa: E501
-        # verify the required parameter 'deviceid' is set
-        if ('deviceid' not in params or
-                params['deviceid'] is None):
-            raise ValueError("Missing the required parameter `deviceid` when calling `fm_devices_deviceid_put`")  # noqa: E501
+            raise ValueError("Missing the required parameter `body` when calling `fm_devices_devicename_put`")  # noqa: E501
+        # verify the required parameter 'devicename' is set
+        if ('devicename' not in params or
+                params['devicename'] is None):
+            raise ValueError("Missing the required parameter `devicename` when calling `fm_devices_devicename_put`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'deviceid' in params:
-            path_params['deviceid'] = params['deviceid']  # noqa: E501
+        if 'devicename' in params:
+            path_params['devicename'] = params['devicename']  # noqa: E501
 
         query_params = []
 
@@ -215,7 +215,7 @@ class DeviceApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/fm/devices/{deviceid}', 'PUT',
+            '/fm/devices/{devicename}', 'PUT',
             path_params,
             query_params,
             header_params,
