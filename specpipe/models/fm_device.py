@@ -51,16 +51,11 @@ class FmDevice(object):
         self._longitude = None
         self._latitude = None
         self.discriminator = None
-        if name is not None:
-            self.name = name
-        if sample_rate is not None:
-            self.sample_rate = sample_rate
-        if freq is not None:
-            self.freq = freq
-        if longitude is not None:
-            self.longitude = longitude
-        if latitude is not None:
-            self.latitude = latitude
+        self.name = name
+        self.sample_rate = sample_rate
+        self.freq = freq
+        self.longitude = longitude
+        self.latitude = latitude
 
     @property
     def name(self):
@@ -80,6 +75,8 @@ class FmDevice(object):
         :param name: The name of this FmDevice.  # noqa: E501
         :type: str
         """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -101,6 +98,8 @@ class FmDevice(object):
         :param sample_rate: The sample_rate of this FmDevice.  # noqa: E501
         :type: str
         """
+        if sample_rate is None:
+            raise ValueError("Invalid value for `sample_rate`, must not be `None`")  # noqa: E501
 
         self._sample_rate = sample_rate
 
@@ -122,6 +121,8 @@ class FmDevice(object):
         :param freq: The freq of this FmDevice.  # noqa: E501
         :type: str
         """
+        if freq is None:
+            raise ValueError("Invalid value for `freq`, must not be `None`")  # noqa: E501
 
         self._freq = freq
 
@@ -143,6 +144,8 @@ class FmDevice(object):
         :param longitude: The longitude of this FmDevice.  # noqa: E501
         :type: float
         """
+        if longitude is None:
+            raise ValueError("Invalid value for `longitude`, must not be `None`")  # noqa: E501
 
         self._longitude = longitude
 
@@ -164,6 +167,8 @@ class FmDevice(object):
         :param latitude: The latitude of this FmDevice.  # noqa: E501
         :type: float
         """
+        if latitude is None:
+            raise ValueError("Invalid value for `latitude`, must not be `None`")  # noqa: E501
 
         self._latitude = latitude
 

@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** |  | [optional] 
-**sample_rate** | **str** |  | [optional] 
-**freq** | **str** |  | [optional] 
-**longitude** | **float** |  | [optional] 
-**latitude** | **float** |  | [optional] 
+**name** | **str** |  | 
+**sample_rate** | **str** |  | 
+**freq** | **str** |  | 
+**longitude** | **float** |  | 
+**latitude** | **float** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

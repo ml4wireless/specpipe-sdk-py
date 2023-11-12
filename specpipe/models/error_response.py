@@ -42,10 +42,8 @@ class ErrorResponse(object):
         self._detail = None
         self._title = None
         self.discriminator = None
-        if detail is not None:
-            self.detail = detail
-        if title is not None:
-            self.title = title
+        self.detail = detail
+        self.title = title
 
     @property
     def detail(self):
@@ -65,6 +63,8 @@ class ErrorResponse(object):
         :param detail: The detail of this ErrorResponse.  # noqa: E501
         :type: str
         """
+        if detail is None:
+            raise ValueError("Invalid value for `detail`, must not be `None`")  # noqa: E501
 
         self._detail = detail
 
@@ -86,6 +86,8 @@ class ErrorResponse(object):
         :param title: The title of this ErrorResponse.  # noqa: E501
         :type: str
         """
+        if title is None:
+            raise ValueError("Invalid value for `title`, must not be `None`")  # noqa: E501
 
         self._title = title
 
