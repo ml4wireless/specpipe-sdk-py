@@ -28,18 +28,23 @@ class UpdateFmDeviceRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'freq': 'str'
+        'freq': 'str',
+        'sample_rate': 'str'
     }
 
     attribute_map = {
-        'freq': 'freq'
+        'freq': 'freq',
+        'sample_rate': 'sample_rate'
     }
 
-    def __init__(self, freq=None):  # noqa: E501
+    def __init__(self, freq=None, sample_rate=None):  # noqa: E501
         """UpdateFmDeviceRequest - a model defined in Swagger"""  # noqa: E501
         self._freq = None
+        self._sample_rate = None
         self.discriminator = None
         self.freq = freq
+        if sample_rate is not None:
+            self.sample_rate = sample_rate
 
     @property
     def freq(self):
@@ -63,6 +68,27 @@ class UpdateFmDeviceRequest(object):
             raise ValueError("Invalid value for `freq`, must not be `None`")  # noqa: E501
 
         self._freq = freq
+
+    @property
+    def sample_rate(self):
+        """Gets the sample_rate of this UpdateFmDeviceRequest.  # noqa: E501
+
+
+        :return: The sample_rate of this UpdateFmDeviceRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._sample_rate
+
+    @sample_rate.setter
+    def sample_rate(self, sample_rate):
+        """Sets the sample_rate of this UpdateFmDeviceRequest.
+
+
+        :param sample_rate: The sample_rate of this UpdateFmDeviceRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._sample_rate = sample_rate
 
     def to_dict(self):
         """Returns the model properties as a dict"""
