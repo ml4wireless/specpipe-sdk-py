@@ -83,6 +83,39 @@ try:
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DeviceApi->fm_devices_get: %s\n" % e)
+
+# create an instance of the API class
+api_instance = specpipe.DeviceApi(specpipe.ApiClient(configuration))
+devicename = 'devicename_example' # str | device name
+
+try:
+    # Read IQ device configuration
+    api_response = api_instance.iq_devices_devicename_get(devicename)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DeviceApi->iq_devices_devicename_get: %s\n" % e)
+
+# create an instance of the API class
+api_instance = specpipe.DeviceApi(specpipe.ApiClient(configuration))
+body = specpipe.UpdateIqDeviceRequest() # UpdateIqDeviceRequest | 
+devicename = 'devicename_example' # str | device name
+
+try:
+    # Update IQ device
+    api_response = api_instance.iq_devices_devicename_put(body, devicename)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DeviceApi->iq_devices_devicename_put: %s\n" % e)
+
+# create an instance of the API class
+api_instance = specpipe.DeviceApi(specpipe.ApiClient(configuration))
+
+try:
+    # List IQ devices
+    api_response = api_instance.iq_devices_get()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DeviceApi->iq_devices_get: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
@@ -94,6 +127,9 @@ Class | Method | HTTP request | Description
 *DeviceApi* | [**fm_devices_devicename_get**](docs/DeviceApi.md#fm_devices_devicename_get) | **GET** /fm/devices/{devicename} | Read FM device configuration
 *DeviceApi* | [**fm_devices_devicename_put**](docs/DeviceApi.md#fm_devices_devicename_put) | **PUT** /fm/devices/{devicename} | Update FM device
 *DeviceApi* | [**fm_devices_get**](docs/DeviceApi.md#fm_devices_get) | **GET** /fm/devices | List FM devices
+*DeviceApi* | [**iq_devices_devicename_get**](docs/DeviceApi.md#iq_devices_devicename_get) | **GET** /iq/devices/{devicename} | Read IQ device configuration
+*DeviceApi* | [**iq_devices_devicename_put**](docs/DeviceApi.md#iq_devices_devicename_put) | **PUT** /iq/devices/{devicename} | Update IQ device
+*DeviceApi* | [**iq_devices_get**](docs/DeviceApi.md#iq_devices_get) | **GET** /iq/devices | List IQ devices
 
 ## Documentation For Models
 
@@ -101,13 +137,10 @@ Class | Method | HTTP request | Description
  - [FmDevice](docs/FmDevice.md)
  - [FmDeviceResponse](docs/FmDeviceResponse.md)
  - [FmDevicesResponse](docs/FmDevicesResponse.md)
+ - [IqDevice](docs/IqDevice.md)
+ - [IqDeviceResponse](docs/IqDeviceResponse.md)
+ - [IqDevicesResponse](docs/IqDevicesResponse.md)
  - [UpdateFmDeviceRequest](docs/UpdateFmDeviceRequest.md)
-
-## Documentation For Authorization
-
- All endpoints do not require authorization.
-
-
-## Author
+ - [UpdateIqDeviceRequest](docs/UpdateIqDeviceRequest.md)
 
 

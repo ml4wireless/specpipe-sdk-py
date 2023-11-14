@@ -7,6 +7,9 @@ Method | HTTP request | Description
 [**fm_devices_devicename_get**](DeviceApi.md#fm_devices_devicename_get) | **GET** /fm/devices/{devicename} | Read FM device configuration
 [**fm_devices_devicename_put**](DeviceApi.md#fm_devices_devicename_put) | **PUT** /fm/devices/{devicename} | Update FM device
 [**fm_devices_get**](DeviceApi.md#fm_devices_get) | **GET** /fm/devices | List FM devices
+[**iq_devices_devicename_get**](DeviceApi.md#iq_devices_devicename_get) | **GET** /iq/devices/{devicename} | Read IQ device configuration
+[**iq_devices_devicename_put**](DeviceApi.md#iq_devices_devicename_put) | **PUT** /iq/devices/{devicename} | Update IQ device
+[**iq_devices_get**](DeviceApi.md#iq_devices_get) | **GET** /iq/devices | List IQ devices
 
 # **fm_devices_devicename_get**
 > FmDeviceResponse fm_devices_devicename_get(devicename)
@@ -132,6 +135,142 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**FmDevicesResponse**](FmDevicesResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **iq_devices_devicename_get**
+> IqDeviceResponse iq_devices_devicename_get(devicename)
+
+Read IQ device configuration
+
+### Example
+```python
+from __future__ import print_function
+import time
+import specpipe
+from specpipe.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = specpipe.DeviceApi()
+devicename = 'devicename_example' # str | device name
+
+try:
+    # Read IQ device configuration
+    api_response = api_instance.iq_devices_devicename_get(devicename)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DeviceApi->iq_devices_devicename_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **devicename** | **str**| device name | 
+
+### Return type
+
+[**IqDeviceResponse**](IqDeviceResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **iq_devices_devicename_put**
+> IqDeviceResponse iq_devices_devicename_put(body, devicename)
+
+Update IQ device
+
+### Example
+```python
+from __future__ import print_function
+import time
+import specpipe
+from specpipe.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = specpipe.DeviceApi()
+body = specpipe.UpdateIqDeviceRequest() # UpdateIqDeviceRequest | 
+devicename = 'devicename_example' # str | device name
+
+try:
+    # Update IQ device
+    api_response = api_instance.iq_devices_devicename_put(body, devicename)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DeviceApi->iq_devices_devicename_put: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**UpdateIqDeviceRequest**](UpdateIqDeviceRequest.md)|  | 
+ **devicename** | **str**| device name | 
+
+### Return type
+
+[**IqDeviceResponse**](IqDeviceResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **iq_devices_get**
+> IqDevicesResponse iq_devices_get()
+
+List IQ devices
+
+### Example
+```python
+from __future__ import print_function
+import time
+import specpipe
+from specpipe.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = specpipe.DeviceApi()
+
+try:
+    # List IQ devices
+    api_response = api_instance.iq_devices_get()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DeviceApi->iq_devices_get: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**IqDevicesResponse**](IqDevicesResponse.md)
 
 ### Authorization
 
