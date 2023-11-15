@@ -32,7 +32,7 @@ class Device(object):
         # Read IQ device configuration
         try:
             response = self.api_instance.iq_devices_devicename_get(devicename)
-            return response.devices
+            return response.device
         except ApiException as e:
             print("Exception when calling DeviceApi->iq_devices_devicename_get: %s\n" % e)
     def iq_update_device(self, devicename, freq=None, sample_rate=None):
