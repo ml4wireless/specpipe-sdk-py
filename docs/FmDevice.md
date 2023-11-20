@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | 
 **sample_rate** | **str** |  | 
+**resample_rate** | **str** |  | 
 **freq** | **str** |  | 
 **longitude** | **float** |  | 
 **latitude** | **float** |  | 
