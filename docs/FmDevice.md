@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**register_ts** | **int** |  | 
+**specpipe_version** | **str** |  | 
 **name** | **str** |  | 
 **sample_rate** | **str** |  | 
 **resample_rate** | **str** |  | 
